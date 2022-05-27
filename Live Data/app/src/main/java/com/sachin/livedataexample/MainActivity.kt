@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
             binding.counterTextView.text = it.toString()
         })
         binding.submitButton.setOnClickListener {
-            binding.counterTextView.text = viewModel.setUpdatedCount().toString()
+          viewModel.setUpdatedCount()
         }
     }
 }
