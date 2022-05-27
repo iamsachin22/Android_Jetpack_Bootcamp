@@ -1,10 +1,15 @@
 package com.sachin.livedataexample
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class MainActivityViewModel:ViewModel() {
-     var counter=MutableLiveData<Int>()
+     private var counter=MutableLiveData<Int>()
+
+     val counterData : LiveData<Int>
+     get() = counter
+
      private var cnt=0;
 
     init {
